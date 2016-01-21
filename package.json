@@ -1,0 +1,38 @@
+{
+  "name": "sei16",
+  "version": "0.0.0",
+  "description": "Semana da Engenharia Informática - Workshop by Seegno",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "keywords": [
+    "cesium",
+    "react",
+    "redux",
+    "seegno",
+    "sei",
+    "sei16",
+    "uminho",
+    "workshop"
+  ],
+  "author": "Seegno",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "4.1.6",
+    "eslint": "1.10.3",
+    "eslint-config-react": "1.1.1",
+    "eslint-config-seegno": "1.2.1",
+    "eslint-loader": "1.2.0",
+    "eslint-plugin-babel": "3.0.0",
+    "eslint-plugin-react": "3.15.0",
+    "webpack": "1.12.11",
+    "webpack-dev-server": "1.14.1"
+  },
+  "dependencies": {
+    "react": "0.14.6",
+    "react-dom": "0.14.6",
+    "react-redux": "4.0.6",
+    "redux": "3.0.5",
+    "redux-thunk": "1.0.3"
+  }
+}
