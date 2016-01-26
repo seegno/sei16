@@ -11,7 +11,7 @@ plugins:
 
 rules:
   complexity: 0
-  id-length: [2, { "exceptions": ["e"]}]
+  id-length: [2, { "exceptions": ["e", "_"]}]
   jsx-quotes: 2
   no-extra-parens: 0
   react/display-name: 0
@@ -40,3 +40,7 @@ rules:
   react/require-extension: 2
   react/self-closing-comp: 2
   react/wrap-multilines: 2
+
+  # Babel plugin
+  babel/arrow-parens: 0
+  babel/generator-star-spacing: 0

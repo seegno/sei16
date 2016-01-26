@@ -5,7 +5,7 @@
   "scripts": {
     "lint": "git diff --cached --name-only --diff-filter=ACMRTUXB | grep -E '\\.(js)(\\..+)?$' | xargs ./node_modules/.bin/eslint",
     "api": "node src/api/bin/index.js",
-    "start": "webpack-dev-server"
+    "start": "node src/server/bin/index.js & webpack-dev-server"
   },
   "keywords": [
     "cesium",
@@ -46,6 +46,8 @@
     "config": "1.19.0",
     "debug": "2.2.0",
     "koa": "1.1.2",
+    "koa-router": "5.3.0",
+    "koa-views": "4.0.1",
     "lodash": "4.0.1",
     "react": "0.14.6",
     "react-dom": "0.14.6",
