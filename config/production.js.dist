@@ -1,0 +1,10 @@
+
+/**
+ * Export `production` configuration.
+ */
+
+module.exports = {
+  api: {
+    port: '<API_PORT>'
+  }
+}
