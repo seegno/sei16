@@ -3,9 +3,9 @@
  * Module dependencies.
  */
 
-import { App } from 'src/containers/app';
+import { App } from 'src/client/containers/app';
 import { Provider } from 'react-redux';
-import { store } from 'src/store';
+import { store } from 'src/client/store';
 import React, { Component } from 'react';
 
 /**
