@@ -11,16 +11,16 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    app: [path.resolve('src/index.js')]
+    app: [path.resolve('src/client/index.js')]
   },
   module: {
     preLoaders: [{
-      include: path.resolve('src'),
+      include: path.resolve('src/client'),
       loader: 'eslint-loader',
       test: /\.(js)$/
     }],
     loaders: [{
-      include: [path.resolve('src')],
+      include: [path.resolve('src/client')],
       loader: 'babel',
       query: {
         presets: ['es2015', 'stage-1', 'react']
