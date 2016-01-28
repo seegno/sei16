@@ -21,6 +21,6 @@ program
  * Start server.
  */
 
-app.listen(program.port);
+app.server.listen(program.port);
 
 debug(`Listening on ${config.get('api.port')}`);
