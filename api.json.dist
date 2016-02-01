@@ -1,0 +1,12 @@
+{
+  "cwd": "<cwd>",
+  "env": {
+    "DEBUG": "sei16:*",
+    "NODE_ENV": "production"
+  },
+  "exec_mode": "cluster",
+  "log_file": "logs/api.log",
+  "merge_logs": true,
+  "name": "SEI16 - API",
+  "script": "src/api/bin/index.js"
+}
