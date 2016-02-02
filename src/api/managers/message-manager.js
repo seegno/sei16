@@ -25,7 +25,7 @@ class MessageManager {
    */
 
   addMessage(message) {
-    this.messages = [message, ...this.messages.slice(0, 4)];
+    this.messages = _.concat([message], this.messages.slice(0, 4));
   }
 
   /**
