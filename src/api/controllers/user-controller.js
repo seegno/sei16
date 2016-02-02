@@ -13,6 +13,8 @@ const userManager = require('./../managers/user-manager');
 module.exports = (router) => {
   // Get users.
   router.get('/users', function *() {
-    this.body = yield userManager.getUsers();
+    const users = userManager.getUsers();
+
+    this.body = userManager.mask(users, 'public');
   });
 };

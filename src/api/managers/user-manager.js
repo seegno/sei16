@@ -5,6 +5,7 @@
  */
 
 const _ = require('lodash');
+const mask = require('json-mask');
 
 /**
  * `UserManager`.
@@ -17,6 +18,10 @@ class UserManager {
    */
 
   constructor() {
+    this.masks = {
+      public: 'username'
+    };
+
     this.users = [];
   }
 
@@ -58,6 +63,14 @@ class UserManager {
 
   removeUser(id) {
     this.users = _.filter(this.users, (user) => user.id !== id);
+  }
+
+  /**
+   * Mask.
+   */
+
+  mask(users, scope) {
+    return users.map((user) => mask(user, this.masks[scope]));
   }
 }
 
