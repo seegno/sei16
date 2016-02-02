@@ -39,7 +39,7 @@ module.exports = (io) => {
    * Handle `addMessage` event.
    */
 
-  io.on('addMessage', (context, text) => {
+  io.on('addMessage', (context, body) => {
     debug('************************************');
     debug('Event addMessage');
 
@@ -52,9 +52,9 @@ module.exports = (io) => {
     }
 
     const message = {
+      body,
       createdAt: new Date().toISOString(),
-      text,
-      username: user.username,
+      username: user.username
     };
 
     messageManager.addMessage(message);
