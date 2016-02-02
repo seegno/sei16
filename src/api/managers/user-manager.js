@@ -25,7 +25,7 @@ class UserManager {
    */
 
   addUser(user) {
-    this.users = [...this.users, user];
+    this.users = _.concat(this.users, [user]);
   }
 
   /**
