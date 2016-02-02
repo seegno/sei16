@@ -44,3 +44,4 @@ rules:
   # Babel plugin
   babel/arrow-parens: 0
   babel/generator-star-spacing: 0
+  babel/require-yield: 0
