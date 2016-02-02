@@ -5,6 +5,9 @@
 
 module.exports = {
   api: {
+    cors: {
+      origin: '*'
+    },
     port: 3030
   },
   server: {
