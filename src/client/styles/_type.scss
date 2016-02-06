@@ -1,0 +1,72 @@
+
+//
+// Typography.
+//
+
+// Font smoothing.
+* {
+  -webkit-font-smoothing: antialised;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+//
+// Headings.
+//
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0 0 $unit-3;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+@each $weight, $value in (thinner:100, thin: 200, normal: 400, capitalize: 600) {
+  .text-#{$weight} {
+    font-weight: $value;
+  }
+}
+
+//
+// Text colors
+//
+
+// Text primary.
+.text-primary {
+  color: $brand-primary;
+}
+
+// Text secundary.
+.text-secundary {
+  color: $brand-secundary;
+}
+
+//
+// Text sizes.
+//
+
+// Text small.
+.text-small {
+  font-size: 14px;
+  margin-bottom: $base-unit;
+}

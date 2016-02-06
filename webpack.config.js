@@ -19,7 +19,8 @@ module.exports = {
       loader: 'eslint-loader',
       test: /\.(js)$/
     }],
-    loaders: [{
+    loaders: [
+    {
       include: [path.resolve('src/client')],
       loader: 'babel',
       query: {
