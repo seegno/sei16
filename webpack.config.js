@@ -20,6 +20,9 @@ module.exports = {
       test: /\.(js)$/
     }],
     loaders: [{
+      loader: 'style!css!sass',
+      test: /\.(scss)$/
+    }, {
       include: [path.resolve('src/client')],
       loader: 'babel',
       query: {

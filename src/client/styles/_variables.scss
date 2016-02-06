@@ -1,0 +1,27 @@
+
+//
+// Variables.
+//
+
+// Colors.
+$brand-primary: #410196;
+$brand-secundary: #16e0a0;
+$gray-light: #f5f6f7;
+
+// Units.
+$base-unit: 8px;
+$unit-2: $base-unit * 2;
+$unit-3: $base-unit * 3;
+$unit-4: $base-unit * 4;
+$unit-5: $base-unit * 5;
+$unit-6: $base-unit * 6;
+$unit-7: $base-unit * 7;
+$unit-8: $base-unit * 8;
+$unit-9: $base-unit * 9;
+$unit-10: $base-unit * 10;
+
+// Easing functions.
+$ease-out-quart: cubic-bezier(.86, 0, .07, 1);
+
+// Sidebar.
+$sidebar-width: 300px;

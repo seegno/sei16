@@ -1,0 +1,20 @@
+
+//
+// SEI16 styles.
+//
+
+// Variables.
+@import 'src/client/styles/variables';
+
+// Scaffolding and core styles.
+@import 'src/client/styles/scaffolding';
+@import 'src/client/styles/type';
+
+// Core components.
+@import 'src/client/styles/buttons';
+@import 'src/client/styles/forms';
+@import 'src/client/styles/sidebar';
+
+// Pages.
+@import 'src/client/styles/chat';
+@import 'src/client/styles/register';

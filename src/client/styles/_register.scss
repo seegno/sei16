@@ -1,0 +1,33 @@
+//
+// Register.
+//
+
+// Register container.
+.register-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+
+  h1 {
+    margin-bottom: $unit-2;
+  }
+
+  h4 {
+    margin-bottom: $unit-4;
+  }
+}
+
+// Register form.
+.register-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 480px;
+
+  .form-control {
+    margin-bottom: $unit-4;
+  }
+}

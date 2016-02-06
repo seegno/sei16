@@ -1,0 +1,46 @@
+
+//
+// Buttons.
+//
+
+// Common button style definition.
+.btn {
+  min-width: 180px;
+  padding: $unit-2 $unit-8;
+
+  line-height: 1;
+  font-size: 18px;
+  font-weight: 200;
+
+  border: 0;
+  border-radius: $base-unit / 2;
+
+  transition: background-color, color, border;
+  transition-duration: .15s;
+  transition-timing-function: $ease-out-quart;
+  box-shadow: none;
+
+  cursor: pointer;
+
+  &,
+  &:active,
+  &:focus,
+  &:visited {
+    outline: 0;
+  }
+}
+
+//
+// Button themes.
+//
+
+// Button secundary.
+.btn-secundary {
+  color: #fff;
+
+  background-color: $brand-secundary;
+
+  &:hover {
+    background-color: lighten($brand-secundary, 5%);
+  }
+}

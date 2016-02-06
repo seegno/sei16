@@ -1,0 +1,79 @@
+//
+// Chat.
+//
+
+// Container.
+.chat {
+  display: flex;
+}
+
+// User list.
+.chat-users-list {
+  overflow: scroll;
+
+  height: 100vh;
+}
+
+// User list item.
+.chat-users-item {
+  padding: $unit-2;
+
+  border-bottom: solid 1px rgba(#000, .1);
+}
+
+// User typing label.
+.user-typing {
+  padding-left: $base-unit;
+
+  color: rgba(#000, .5);
+
+  opacity: 0;
+  transition: opacity .3s ease;
+
+  &-active {
+    opacity: 1;
+  }
+}
+
+// Message list container.
+.chat-messages {
+  overflow: scroll;
+
+  width: calc(100vw - #{$sidebar-width});
+  height: calc(100vh - #{$unit-5});
+}
+
+// Message list
+.chat-messages-list {
+  overflow: scroll;
+
+  height: 100%;
+  width: 100%;
+  padding: $unit-4;
+}
+
+// Message from bot.
+.message-bot {
+  margin-bottom: $unit-2;
+  padding-bottom: $unit-2;
+
+  color: $brand-secundary;
+
+  border-bottom: dashed 1px rgba(#000, .2);
+}
+
+// Message author label.
+.chat-message-author {
+  margin-bottom: $base-unit;
+}
+
+// Form.
+.chat-form {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: $sidebar-width;
+
+  width: calc(100% - $sidebar-width);
+  padding: $unit-2;
+}
