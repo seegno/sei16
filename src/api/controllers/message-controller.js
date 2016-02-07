@@ -13,6 +13,6 @@ const messageManager = require('./../managers/message-manager');
 module.exports = (router) => {
   // Get messages.
   router.get('/messages', function *() {
-    this.body = yield messageManager.getMessages();
+    this.body = messageManager.getMessages();
   });
 };
