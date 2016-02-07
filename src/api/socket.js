@@ -25,12 +25,19 @@ module.exports = (io) => {
     if (userManager.getUserByUsername(username)) {
       debug(`User with username ${username} already exists`);
 
+      context.socket.emit('joinResponse', {
+        message: `User with username ${username} already exists`,
+        type: 'error'
+      });
+
       return;
     }
 
     userManager.addUser({ id: context.socket.id, username });
 
     debug(`"${username}" joined`);
+
+    context.socket.emit('joinResponse', { type: 'success' });
 
     io.broadcast('join', username);
   });
