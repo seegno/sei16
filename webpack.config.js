@@ -11,7 +11,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    app: [path.resolve('src/client/index.js')]
+    app: ['babel-polyfill', path.resolve('src/client/index.js')]
   },
   module: {
     preLoaders: [{
