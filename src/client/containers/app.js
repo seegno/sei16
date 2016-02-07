@@ -4,9 +4,8 @@
  */
 
 import { IndexRoute, Router, Route, browserHistory } from 'react-router'
-import Chat from 'src/client/components/chat';
+import { Welcome } from 'src/client/components/welcome';
 import React, { Component } from 'react';
-import Register from 'src/client/components/register';
 
 /**
  * Export `App`.
@@ -23,12 +22,7 @@ export class App extends Component {
       <Router history={browserHistory}>
         <Route path={'/'}>
           <IndexRoute
-            component={Register}
-          />
-
-          <Route
-            component={Chat}
-            path={'chat'}
+            component={Welcome}
           />
         </Route>
       </Router>
