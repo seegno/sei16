@@ -4,7 +4,7 @@
  */
 
 import { IndexRoute, Router, Route, browserHistory } from 'react-router'
-import { Welcome } from 'src/client/components/welcome';
+import Register from 'src/client/components/register';
 import React, { Component } from 'react';
 
 /**
@@ -22,7 +22,7 @@ export class App extends Component {
       <Router history={browserHistory}>
         <Route path={'/'}>
           <IndexRoute
-            component={Welcome}
+            component={Register}
           />
         </Route>
       </Router>
