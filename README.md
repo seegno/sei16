@@ -49,4 +49,4 @@ After installing _npm_ dependencies you're ready to go. Run the following comman
 npm start
 ```
 
-This starts a local server. Just open your browser, go to [localhost:3000](http://localhost:3000) and you're ready to go.
+This starts a local server. Just open your browser, go to [localhost:3000](http://localhost:3000) and if you see a welcome message you're ready to go.
