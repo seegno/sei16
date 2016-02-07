@@ -13,6 +13,20 @@ Managing the application state in terms of data structure organization is usuall
 
 During the workshop we're going to build a simple chat application in order to show how integrating **Redux** into **React** can solve complex problems such as routing, cache management or asynchronous events like fetching data from the server.
 
+## Requirements
+
+**Previous knowledge**
+- Functional programming
+- JavaScript - [ES2015](https://babeljs.io/docs/learn-es2015/)
+- [ReactJS](https://facebook.github.io/react/docs/getting-started.html)
+- [Redux](http://redux.js.org/)
+- [Flux](https://facebook.github.io/flux/docs/overview.html#content) (Optional)
+
+**System requirements**
+- [Node](https://nodejs.org/en/) >= 4
+- [npm](https://www.npmjs.com/) >= 3
+- Modern text editor (e.g. [Atom](https://atom.io/))
+
 ## Installation
 
 Clone project to you local directory:
