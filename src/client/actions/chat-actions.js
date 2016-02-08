@@ -29,12 +29,13 @@ export function joinChat(username) {
 
           return;
         }
+
         dispatch({
           type: ActionTypes.JOIN_CHAT_SUCCESS,
           payload: { username }
         });
 
-        dispatch(routeActions.push('/'));
+        dispatch(routeActions.push('/chat'));
       });
   }
 }
