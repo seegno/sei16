@@ -6,6 +6,7 @@
 import { Enum } from 'enumify';
 import { concat } from 'lodash';
 import ChatActionTypes from 'src/client/action-types/chat-action-types';
+import UserActionTypes from 'src/client/action-types/user-action-types';
 
 /**
  * Create `ActionTypes` enum.
@@ -14,7 +15,8 @@ import ChatActionTypes from 'src/client/action-types/chat-action-types';
 class ActionTypes extends Enum {}
 
 ActionTypes.initEnum(concat(
-  ChatActionTypes
+  ChatActionTypes,
+  UserActionTypes
 ));
 
 /**
