@@ -5,8 +5,8 @@
 
 import { ChatMessages } from 'src/client/components/chat/chat-messages';
 import { UserList } from 'src/client/components/chat/user-list';
-import { getMessages, getUsers } from 'src/client/actions';
 import { connect } from 'react-redux';
+import { getMessages, getUsers } from 'src/client/actions';
 import React, { Component, PropTypes } from 'react';
 
 /**
