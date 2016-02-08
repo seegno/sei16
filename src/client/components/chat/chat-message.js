@@ -3,6 +3,7 @@
  * Module dependencies.
  */
 
+import { getColorCode } from 'src/client/util/color-code';
 import React, { Component, PropTypes } from 'react';
 
 /**
@@ -29,8 +30,12 @@ export class ChatMessage extends Component {
 
     return (
       <div className={'chat-message'}>
-        <div className={'chat-message-author'}>
-          <span className={'text-small text-primary'}>{`${username} `}</span>
+        <div
+          className={'chat-message-author'}
+          style={{ color: getColorCode(username) }}
+        >
+          <span className={'text-small'}>{`${username} `}</span>
+
           <span className={'text-thin text-small'}>{'said:'}</span>
         </div>
 

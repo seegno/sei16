@@ -3,6 +3,7 @@
  * Module dependencies.
  */
 
+import { getColorCode } from 'src/client/util/color-code';
 import React, { Component, PropTypes } from 'react';
 
 /**
@@ -32,7 +33,13 @@ export class UserList extends Component {
           className={'chat-users-item'}
           key={index}
         >
-          <span className={'text-light'}>{user.username}</span>
+          <span
+            className={'text-light'}
+            style={{ color: getColorCode(user.username) }}
+          >
+          {user.username}
+          </span>
+
           <span className={`user-typing ${user.typing ? 'user-typing-active': ''}`}>{'Typing...'}</span>
         </div>
       ));
