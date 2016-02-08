@@ -35,3 +35,14 @@ export function getMessages() {
     }
   }
 }
+
+/**
+ * Export `addMessage` action.
+ */
+
+export function addMessage(message) {
+  return {
+    type: ActionTypes.ADD_MESSAGE,
+    payload: { ...message }
+  };
+}

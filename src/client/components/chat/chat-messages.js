@@ -57,7 +57,7 @@ export class ChatMessages extends Component {
   renderMessages() {
     const { messages } = this.props;
 
-    if (isEmpty) {
+    if (isEmpty(messages)) {
       return;
     }
 
@@ -68,7 +68,7 @@ export class ChatMessages extends Component {
           key={index}
           username={username}
         />
-      )
+      );
     });
   }
 

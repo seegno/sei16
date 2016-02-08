@@ -6,9 +6,10 @@
 import { ChatForm } from 'src/client/components/chat/form';
 import { ChatMessages } from 'src/client/components/chat/chat-messages';
 import { UserList } from 'src/client/components/chat/user-list';
+import { addMessage, addUser, getMessages, getUsers, removeUser, startTyping, stopTyping } from 'src/client/actions';
 import { connect } from 'react-redux';
-import { getMessages, getUsers } from 'src/client/actions';
 import React, { Component, PropTypes } from 'react';
+import socket from 'src/client/util/socket';
 
 /**
  * `Chat`.
@@ -45,6 +46,25 @@ class Chat extends Component {
 
     // Fetch users.
     dispatch(getUsers());
+
+    // Add socket.io event listeners.
+    socket
+      .on('join', (username) => {
+        dispatch(addUser(username));
+      })
+      .on('addMessage', (message) => {
+        dispatch(addMessage(message));
+      })
+      .on('leave', (username) => {
+        dispatch(removeUser(username));
+      })
+      .on('typing', (username) => {
+        dispatch(startTyping(username));
+      })
+      .on('stopTyping', (username) => {
+        dispatch(stopTyping(username))
+      });
+  }
 
   /**
    * Handle changes on input field.

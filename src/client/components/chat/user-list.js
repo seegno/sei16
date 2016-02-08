@@ -33,6 +33,7 @@ export class UserList extends Component {
           key={index}
         >
           <span className={'text-light'}>{user.username}</span>
+          <span className={`user-typing ${user.typing ? 'user-typing-active': ''}`}>{'Typing...'}</span>
         </div>
       ));
 
