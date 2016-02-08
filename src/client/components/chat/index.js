@@ -3,6 +3,7 @@
  * Module dependencies.
  */
 
+import { ChatForm } from 'src/client/components/chat/form';
 import { ChatMessages } from 'src/client/components/chat/chat-messages';
 import { UserList } from 'src/client/components/chat/user-list';
 import { connect } from 'react-redux';
@@ -44,6 +45,35 @@ class Chat extends Component {
 
     // Fetch users.
     dispatch(getUsers());
+
+  /**
+   * Handle changes on input field.
+   */
+
+  onChange(event) {
+    if (event.target.value) {
+      socket.emit('typing');
+
+      return;
+    }
+
+    socket.emit('stopTyping');
+  }
+
+  /**
+   * Handle submit.
+   */
+
+  onSubmit() {
+    const value = this.refs.chatForm.getValue();
+
+    if (!value) {
+      return;
+    }
+
+    socket
+      .emit('addMessage', value)
+      .emit('stopTyping');
   }
 
   /**
@@ -61,6 +91,12 @@ class Chat extends Component {
 
         <div className={'chat-messages'}>
           <ChatMessages messages={messages.messageList} />
+
+          <ChatForm
+            onChange={this.onChange.bind(this)}
+            onSubmit={this.onSubmit.bind(this)}
+            ref={'chatForm'}
+          />
         </div>
       </div>
     );
