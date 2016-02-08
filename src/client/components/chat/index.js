@@ -51,12 +51,24 @@ class Chat extends Component {
     socket
       .on('join', (username) => {
         dispatch(addUser(username));
+
+        dispatch(addMessage({
+          body: `${username} joined conversation.`,
+          createdAt: new Date(),
+          type: 'bot'
+        }));
       })
       .on('addMessage', (message) => {
         dispatch(addMessage(message));
       })
       .on('leave', (username) => {
         dispatch(removeUser(username));
+
+        dispatch(addMessage({
+          body: `${username} left conversation.`,
+          createdAt: new Date(),
+          type: 'bot'
+        }));
       })
       .on('typing', (username) => {
         dispatch(startTyping(username));

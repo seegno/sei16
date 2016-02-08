@@ -62,6 +62,10 @@ export class ChatMessages extends Component {
     }
 
     return messages.map(({ body, type, username }, index) => {
+      if (type === 'bot') {
+        return (<div className={'message-bot text-thin'}>{body}</div>)
+      }
+
       return (
         <ChatMessage
           body={body}
