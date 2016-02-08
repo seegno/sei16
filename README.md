@@ -4,6 +4,7 @@ Semana da Engenharia Informática 2016 - Workshop by Seegno
 
 ## Table of Contents
  - [Summary](https://github.com/seegno/sei16#summary)
+ - [Requirements](https://github.com/seegno/sei16#requirements)
  - [Installation](https://github.com/seegno/sei16#installation)
  - [Run Application](https://github.com/seegno/sei16#run-application)
 
